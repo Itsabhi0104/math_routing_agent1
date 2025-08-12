@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+aiosqlite
+lancedb
+sentence-transformers
+sympy
+numpy
+google-generativeai
+dspy-ai
+datasets
+httpx
+pydantic
+python-dotenv
