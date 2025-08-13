@@ -7,7 +7,7 @@ import asyncio
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.services.db_service import DBService
-from app.dspy_integration import MathCoTPipeline
+from backend.app.core.dspy_integration import MathCoTPipeline
 from app.models.models import UserFeedback
 
 logger = logging.getLogger(__name__)
@@ -92,7 +92,7 @@ class AdaptiveLearner:
         and update the LanceDB store.
         """
         from app.knowledge_loader import KnowledgeBaseBuilder
-        from app.lancedb_store import LanceDBStore
+        from backend.app.core.lancedb_store import LanceDBStore
 
         # 1) Gather Q&A pairs with high ratings
         feedbacks: List[UserFeedback] = await self.db.list_feedback(limit=100)

@@ -10,7 +10,7 @@ from pathlib import Path
 # Add backend to path so we can import our modules
 sys.path.append('backend')
 
-from app.lancedb_store import LanceDBStore
+from backend.app.core.lancedb_store import LanceDBStore
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
